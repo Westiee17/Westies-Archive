@@ -116,6 +116,19 @@
   }
   .hero p.lede{ font-size:1.08rem; color:var(--ink-soft); max-width:46ch; line-height:1.6; margin-bottom:28px; }
   .hero-actions{ display:flex; gap:12px; flex-wrap:wrap; }
+  .fan-events{
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+    margin-top:18px;
+  }
+  .fan-events-label{
+    font-family:'Caveat', cursive; font-size:1.05rem; color:var(--gold); font-weight:700;
+  }
+  .fan-events-link{
+    background:none; border:1px dashed var(--line); border-radius:999px;
+    padding:6px 14px; font-size:0.82rem; color:var(--ink-soft); cursor:pointer;
+    transition:all .18s ease;
+  }
+  .fan-events-link:hover{ border-color:var(--gold); color:var(--ink); background:var(--gold-soft); }
   .btn{
     display:inline-flex; align-items:center; gap:8px; padding:12px 20px; border-radius:999px;
     font-size:0.92rem; font-weight:500; text-decoration:none; border:1px solid transparent;
@@ -207,6 +220,16 @@
     background:linear-gradient(135deg, var(--blue-soft), var(--red-soft));
     display:flex; align-items:center; justify-content:center; font-size:1.6rem;
     flex-shrink:0;
+  }
+  .subseries-title{
+    font-family:'Fraunces', serif; font-weight:600; font-size:1.3rem;
+    color:var(--blue-deep); margin:8px 4px 6px;
+    display:flex; align-items:center; gap:10px;
+  }
+  .subseries-title::before{
+    content:""; width:20px; height:2px; border-radius:2px;
+    background:linear-gradient(90deg, var(--blue), var(--red));
+    display:inline-block;
   }
 
   /* ---------- Quick links (scrapbook stickers) ---------- */
@@ -329,7 +352,11 @@
           <button class="btn btn-primary" onclick="showView('timeline')">View Timeline →</button>
           <button class="btn btn-outline" onclick="showView('photos')">Photo Collections</button>
           <button class="btn btn-outline" onclick="showView('community')">Westies Community</button>
-          <button class="btn btn-outline" onclick="showView('youmaniac')">Series</button>
+        </div>
+        <div class="fan-events">
+          <span class="fan-events-label">Fan Events</span>
+          <button class="fan-events-link" onclick="showView('documents')">Documents</button>
+          <button class="fan-events-link" onclick="showView('youmaniac')">Series</button>
         </div>
       </div>
       <div class="hero-visual">
@@ -399,15 +426,39 @@
       <div>
         <p class="kicker">series</p>
         <h2>Series</h2>
-        <p>All the questions from the You Maniac series, gathered together.</p>
+        <p>Q's and episode stills from every series Westies follow.</p>
       </div>
       <div class="blob">🎤</div>
     </div>
+
+    <h3 class="subseries-title">ThamePo: Heart that Skips a Beat</h3>
     <div class="grid">
-      <a class="card type-sheet" href="https://drive.google.com/open?id=1vOhs8LpiOOfYt5MNRCa9WK7SKFLK0ptmQU3KK8hCGLU" target="_blank" rel="noopener">
+      <a class="card type-sheet" href="https://docs.google.com/spreadsheets/d/1i4lgNc3g4nbjdI9e5Bouw9OZ5tQrKgicmQ8ftqvs_rE/edit?usp=drivesdk" target="_blank" rel="noopener">
         <div class="tape-bit"></div>
         <div class="photo-swatch">📊</div>
-        <h3>You Maniac</h3>
+        <h3>Q's</h3>
+        <div class="meta"><span class="kind">sheet</span><span class="arrow">→</span></div>
+      </a>
+      <a class="card type-sheet" href="https://docs.google.com/spreadsheets/d/1VQnNRNmOEHDyaEV_rhLUwYn92R9WGmP85mnYGkhbrqk/edit?usp=drivesdk" target="_blank" rel="noopener">
+        <div class="tape-bit"></div>
+        <div class="photo-swatch">📊</div>
+        <h3>Episode Stills</h3>
+        <div class="meta"><span class="kind">sheet</span><span class="arrow">→</span></div>
+      </a>
+    </div>
+
+    <h3 class="subseries-title">You Maniac</h3>
+    <div class="grid">
+      <a class="card type-sheet" href="https://docs.google.com/spreadsheets/d/1vOhs8LpiOOfYt5MNRCa9WK7SKFLK0ptmQU3KK8hCGLU/edit?usp=drivesdk" target="_blank" rel="noopener">
+        <div class="tape-bit"></div>
+        <div class="photo-swatch">📊</div>
+        <h3>Q's</h3>
+        <div class="meta"><span class="kind">sheet</span><span class="arrow">→</span></div>
+      </a>
+      <a class="card type-sheet" href="https://docs.google.com/spreadsheets/d/1Kiep-2cuBPkYdcC33Z4VW0utwQa4QSDOB7_Kwito8Qo/edit?usp=drivesdk" target="_blank" rel="noopener">
+        <div class="tape-bit"></div>
+        <div class="photo-swatch">📊</div>
+        <h3>Episode Stills</h3>
         <div class="meta"><span class="kind">sheet</span><span class="arrow">→</span></div>
       </a>
     </div>
